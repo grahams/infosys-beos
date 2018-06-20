@@ -39,7 +39,6 @@ InfosysView::InfosysView( BRect rect )
 	frame = 0;
 	mlocation = "www.csh.rit.edu/";
 
-	BRect rect(Bounds());
 	rect.OffsetTo( B_ORIGIN );
 	rect.top = rect.bottom -7;
 	rect.left = rect.right -7;

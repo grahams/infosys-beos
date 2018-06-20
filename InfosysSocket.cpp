@@ -17,6 +17,7 @@
 #include <string.h>
 #include <errno.h>
 #include <sys/socket.h>
+#include <SupportDefs.h>
 #include <netdb.h>
 #include <netinet/in.h>
 
@@ -99,7 +100,7 @@ int get_infosys_file( char *filename )
 
 	if( (sock = open_connection("jake.csh.rit.edu", 20000)) >= 0 )
 	{
-			fn = open( filename, O_RDWR | O_CREAT | O_TRUNC | O_TEXT );
+			fn = open( filename, O_RDWR | O_CREAT | O_TRUNC );
 			count = sock_readline( sock, buf, 512 );
 			while( count > 0 )
 			{
